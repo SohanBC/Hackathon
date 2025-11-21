@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fake App Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header>
+  <div class="logo">FakeApp Detector</div>
+  <nav>
+    <a href="#scan">Scan</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#evidence">Evidence Kits</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="card" id="scan">
+    <h2>Scan App by Play Store URL</h2>
+    <input type="text" id="urlInput" placeholder="Paste Play Store App URL" />
+    <button onclick="scanURL()">Scan</button>
+    <div id="urlResult" class="result-box" style="display:none"></div>
+  </div>
+
+  <div class="card">
+    <h2>Upload APK for Deep Scan</h2>
+    <input type="file" id="apkInput" />
+    <button onclick="uploadAPK()">Upload & Scan</button>
+    <div id="apkResult" class="result-box" style="display:none"></div>
+  </div>
+
+  <div class="card" id="dashboard">
+    <h2>Risk Dashboard</h2>
+    <p>Recent scans will appear here. (Demo only)</p>
+    <div id="dashboardList"></div>
+  </div>
+
+  <div class="card" id="evidence">
+    <h2>Download Evidence Kit</h2>
+    <input type="text" id="scanIdInput" placeholder="Enter Scan ID" />
+    <button onclick="downloadEvidence()">Download</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
